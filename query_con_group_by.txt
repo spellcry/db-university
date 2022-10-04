@@ -1,0 +1,23 @@
+QUERY 1:
+
+SELECT YEAR(`enrolment_date`)as `anno_iscrizione`, COUNT(*) as `totale_iscritti`
+FROM `students`
+GROUP BY YEAR(`enrolment_date`);
+
+QUERY 2:
+
+SELECT `office_address`, COUNT(*) as `insegnanti_presenti`
+FROM `teachers`
+GROUP BY `office_address`;
+
+QUERY 3:
+
+SELECT `exam_id`, AVG(`vote`) as `media_voto`
+FROM `exam_student`
+GROUP BY `exam_id`;
+
+QUERY 4:
+
+SELECT `department_id`, COUNT(*) as `totale_corsi`
+FROM `degrees`
+GROUP BY `department_id`;
